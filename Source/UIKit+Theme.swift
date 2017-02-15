@@ -88,6 +88,11 @@ extension UITableView
         get { return getThemePicker(self, "setSeparatorColor:") as? ThemeColorPicker }
         set { setThemePicker(self, "setSeparatorColor:", newValue) }
     }
+    
+    public var theme_sectionIndexColor: ThemeColorPicker? {
+        get { return getThemePicker(self, "setSectionIndexColor:") as? ThemeColorPicker }
+        set { setThemePicker(self, "setSectionIndexColor:", newValue) }
+    }
 }
 extension UITextField
 {
