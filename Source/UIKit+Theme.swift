@@ -235,6 +235,19 @@ extension CALayer
     }
 }
 
+extension CAShapeLayer
+{
+    public var theme_fillColor: ThemeCGColorPicker? {
+        get { return getThemePicker(self, "setFillColor:") as? ThemeCGColorPicker}
+        set { setThemePicker(self, "setFillColor:", newValue) }
+    }
+
+    public var theme_strokeColor: ThemeCGColorPicker? {
+        get { return getThemePicker(self, "setStrokeColor:") as? ThemeCGColorPicker }
+        set { setThemePicker(self, "setStrokeColor:", newValue) }
+    }
+}
+
 private func getThemePicker(
     _ object : NSObject,
     _ selector : String
